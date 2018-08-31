@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content">
+	<name>Plugin MomoSEO Content</name>
+	<author>Jorge Demetrio</author>
+	<creationDate>Outrubro 2017</creationDate>
+
+	<license>GNU General Public License version 3 or later; see LICENSE.txt
+	</license>
+	<authorEmail>jorge.demetrio@alldreams.com.br</authorEmail>
+	<authorUrl>www.alldreams.com.br</authorUrl>
+	<version>{VERSAO}</version>
+	<description>MomoSEO é um plugin que trabalho o seo do seu conteudo,
+		alterando o tamanho das imagens de introdução e do artigo para seu
+		site responder mais rápido.</description>
+	<files>
+		<!-- <filename plugin="categories">categories.php</filename> -->
+		<filename>index.html</filename>
+		<filename plugin="plg_momoseo_content">plg_momoseo_content.php</filename>
+		<folder>languages</folder>
+	</files>
+	<languages > 
+		<language tag="en-GB">languages/en-GB.plg_momoseo_content.ini</language> 
+		<language tag="en-GB">languages/en-GB.plg_momoseo_content.sys.ini</language> 
+		<language tag="pt-BR">languages/pt-BR.plg_momoseo_content.ini</language> 
+		<language tag="pt-BR">languages/pt-BR.plg_momoseo_content.sys.ini</language> 
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+
+
+				<field name="logo_intro" type="media" description="Logo Tipo"
+					directory="/images/" label="Imagem logo para roberpor os Thumbs" />
+
+
+
+			</fieldset>
+			<fieldset name="another_fileds_1">
+			
+				<field type="spacer" name="espacoImgMateria" class="text"
+					label="Dados para imagem da matéria" />
+				<field name="img_tamanho" type="number" default="700"
+					description="Largura da imagem do artigo (em pixel, porem não necesita colocar PX)"
+					label="Largura da imagem do artigoo" size="5" />
+
+                                <field name="img_tamanho_h" type="number" default="350"
+                                        description="Altura da imagem do artigo (em pixel, porem não necesita colocar PX)"
+                                        label="Largura da imagem do artigoo" size="5" />
+
+
+				<field name="qualida_full" active="true" type="range"
+					label="Qualidade da imagem da matéria %" description="Qualidade da imagem de intro recomendamos 75%"
+					max="100" min="1" step="1" default="75" />
+
+				<field name="alinhamento_h_full" type="list" default="1"
+					required="true" label="Alinhamento horizontal do logo sobre as imagem"
+					description="">
+					<option value="">Selecione uma opção</option>
+					<option value="1">Esquerda</option>
+					<option value="2">Centro</option>
+					<option value="3">Direita</option>
+				</field>
+
+				<field name="alinhamento_v_full" type="list" default="1"
+					required="true" label="Alinhamento vertical do logo sobre as imagem"
+					description="">
+					<option value="">Selecione uma opção</option>
+					<option value="1">Topo</option>
+					<option value="2">Centro</option>
+					<option value="3">Abaixo</option>
+				</field>
+
+
+
+
+
+
+			</fieldset>
+			<fieldset name="another_fileds_2">
+							<field type="spacer" name="espacoImgMateriaInter" class="text"
+					label="Dados para imagem de intro da matéria" />
+					
+			
+					
+				<field name="img_tamanho_intro" type="number" default="250"
+					description="Largura da imagem de intro (em pixel, porem não necesita colocar PX)"
+					label="Largura da imagem de intro" size="5" />
+
+
+                                <field name="img_tamanho_intro_h" type="number" default="200"
+                                        description="Altura da imagem de intro (em pixel, porem não necesita colocar PX)"
+                                        label="Largura da imagem de intro" size="5" />
+
+
+
+
+				<field name="qualida_intro" active="true" type="range"
+					label="Qualidade da imagem de intro em %" description="Qualidade da imagem de intro recomendamos 60%"
+					max="100" min="1" step="1" default="60" />
+
+				<field name="alinhamento_h_intro" type="list" default="1"
+					required="true" label="Alinhamento horizontal do logo sobre as imagem de intro"
+					description="">
+					<option value="">Selecione uma opção</option>
+					<option value="1">Esquerda</option>
+					<option value="2">Centro</option>
+					<option value="3">Direita</option>
+				</field>
+
+
+				<field name="alinhamento_v_intro" type="list" default="1"
+					required="true" label="Alinhamento vertical do logo sobre as imagem de intro"
+					description="">
+					<option value="">Selecione uma opção</option>
+					<option value="1">Topo</option>
+					<option value="2">Centro</option>
+					<option value="3">Abaixo</option>
+				</field>
+
+
+
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

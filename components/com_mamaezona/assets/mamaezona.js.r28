@@ -1,0 +1,96 @@
+var MAMAEZONA = {versao:'{VERSAO}',titulo:'Mamãezona'};
+ 
+ 
+ /**
+  * Message box
+  */
+MAMAEZONA.alert = function(msg){
+ 
+}
+ 
+//alert = function(msg){
+//	MAMAEZONA.alert(msg);
+//}
+ 
+ 
+ /**
+  * Verifica se existe mensagem para o usuáio logado;
+  */
+ MAMAEZONA.hasMensagens = function(){
+	 
+ }
+ 
+ MAMAZONA.sugerirAssuntos = function(origem,destino){
+	 
+ }
+
+
+MAMAEZONA.tipoSelecionado = function(tabela,tipo,assunto,addNew){
+	if(tipo.attr('alterado')=='S'){
+		if(addNew){
+			var html="<tr>";
+				
+			html+="<tr>";
+			$('#'+tabela.attr('id')+' > tbody:last-child').append(html);
+		}
+	}
+	tipo.attr('alterado','S');
+	MAMAEZONA.carregarAssunto(tipo,assunto);
+}
+
+MAMAEZONA.carregarTipo = function(combo,apenaUm){
+	combo.find('option')
+				.remove()
+				.end()
+				.append('<option value=""></option>');
+				
+	if(apenaUm){
+		for(var i=0; i<MAMAEZONA.tipos.length;i++){
+			var tipo = MAMAEZONA.tipos[i];
+			var assuntos = tipo.assuntos;
+			var optGroup = $("<optgroup label='"+tipo.titulo+"'></optgroup>");
+			for(var j=0; i<assuntos.length;j++){
+				optGroup.append($('<option>', {
+					value: assuntos[j].token,
+					text: assuntos[j].titulo
+				});
+			}
+			combo.append(optGroup);
+		}
+	}
+	else{
+		for(var i=0; i<MAMAEZONA.tipos.length;i++){
+			var tipo = MAMAEZONA.tipos[i];
+			combo.append($('<option>', {
+				value: tipo.token,
+				text: tipo.titulo
+			}));
+		}
+		combo.change(function(obj){
+			var $obj = $(obj);
+			MAMAEZONA.tipoSelecionado($('#'+$obj.attr('tabela')), $obj, $('#'+$obj.attr('assunto')),false);
+		});
+	}
+}
+
+MAMAEZONA.carregarAssunto = function(tipoCmb,assuntoCmb){
+	for(var i=0; i<MAMAEZONA.tipos.length;i++){
+		var tipo = MAMAEZONA.tipos[i];
+		var assuntos;
+		if(tipo.token==tipoCmb.val()){
+			assuntos = tipo.assuntos;
+			assuntoCmb.find('option')
+				.remove()
+				.end()
+				.append('<option value=""></option>');
+			for(var j=0; j<assuntos.length;j++){
+				//after
+				assuntoCmb.append($('<option>', {
+					value: assuntos[j].token,
+					text: assuntos[j].titulo
+				}));
+			}
+			break;
+		}
+	}
+} 

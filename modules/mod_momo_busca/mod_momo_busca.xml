@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Momo SEO - Busca</name>
+	<author>Jorge Demetrio</author>
+	<version>{VERSAO}</version>
+	<description>Módulo De busca</description>
+
+
+
+	<files>
+		<filename>mod_momo_busca.xml</filename>
+		<filename module="mod_momo_busca">mod_momo_busca.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>languages</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_momo_seo.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_momo_seo.sys.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_momo_seo.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_momo_seo.sys.ini</language>
+		<language tag="es-ES">languages/es-ES.mod_momo_seo.ini</language>
+		<language tag="es-ES">languages/es-ES.mod_momo_seo.sys.ini</language>
+		<language tag="pt-BR">languages/pt-BR.mod_momo_seo.ini</language>
+		<language tag="pt-BR">languages/pt-BR.mod_momo_seo.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="cx" type="text" default="" label="JMOD_MOMOSEO_CX" />
+				<field name="cof" type="text" default="" label="JMOD_MOMOSEO_COF" />
+				<field name="lblClass" type="text" default="" label="JMOD_MOMOSEO_CLASS" />
+				<field name="lblBusca" type="text" default="Search" label="JMOD_MOMOSEO_BUSCAR" />
+				<field name="lblImagem" type="media" label="JMOD_MOMOSEO_IMAGE" />
+				<field name="lang" type="text" default="en" label="JMOD_MOMOSEO_IMAGE" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" name="Momo SEO - Busca" priority="1">http://updates.alldreams.com.br/mod_momo_busca.xml</server>
+	</updateservers>
+	<config>
+	</config>
+</extension>

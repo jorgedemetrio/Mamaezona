@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>COM_MAMAEZONA</name>
+	<creationDate>September 01, 2017</creationDate>
+	<author>Jorge Demetrio</author>
+	<authorEmail>jorge.demetrio@alldreams.com.br</authorEmail>
+	<authorUrl>www.alldreams.com.br</authorUrl>
+	<copyright>Copyright (C) 2015. All Rights Reserved</copyright>
+	<license>GNU/GPL Version 3 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>{VERSAO}</version>
+	<description><![CDATA[
+		<h1>Mamãezona ({VERSAO})</h1>
+		<div style="clear: both;"></div>
+		<p>Componente Mamãezona <strong>Built for Joomla 3.8.</strong></p>
+		<p>Created by <a href="http://www.alldreams.com.br" target="_blank">Jorge Demetrio | www.alldreams.com.br</a>
+	]]></description>
+
+	<!-- Runs on install/uninstall/update; New in Joomla 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>mamaezona.php</filename>
+		<folder>icones</folder>
+		<folder>helpers</folder>
+		<folder>views</folder>
+		<folder>assets</folder>
+		<folder>Google</folder>
+		<folder>recaptcha</folder>
+		<folder>controllers</folder>
+	</files>
+    
+	<install>
+        <sql>
+            <file charset="utf8" driver="mysql">install/installsql.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">install/uninstallsql.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+	
+	<updateservers>
+		<server type="extension" name="com_mamaezona" priority="1">http://updates.alldreams.com.br/com_mamaezona.xml</server>
+	</updateservers>
+	
+	<administration>
+		<menu img="components/com_mamaezona/assets/images/icons/com_mamaezona-16x16.png">COM_MAMAEZONA_MENU</menu>
+		<submenu>
+			<menu option="com_mmaezona" view="categoria">COM_MAMAEZONA</menu>
+<!-- 			<menu link="option=com_mamaezona&amp;task=crow">COM_MOMOSEO_CROW</menu> -->
+<!-- 			<menu link="option=com_mamaezona&amp;task=sitemaps">COM_MOMOSEO_SITEMAP</menu> -->
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>mamaezona.php</filename>
+			<folder>install</folder>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>language</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_mamaezona.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_mamaezona.sys.ini</language>
+			<language tag="en-US">language/en-US/en-US.com_mamaezona.ini</language>
+			<language tag="en-US">language/en-US/en-US.com_mamaezona.sys.ini</language>
+			<language tag="es-ES">language/es-ES/es-ES.com_mamaezona.ini</language>
+			<language tag="es-ES">language/es-ES/es-ES.com_mamaezona.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_mamaezona.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_mamaezona.sys.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_mamaezona.ini</language>
+			<language tag="pt-BR">language/pt-BR/pt-BR.com_mamaezona.sys.ini</language>
+		</languages>
+
+	</administration>
+</extension>

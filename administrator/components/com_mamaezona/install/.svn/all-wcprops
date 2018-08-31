@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/mamaezona/!svn/ver/25/trunk/com_mamaezona/src/main/php/com_mamaezona/admin/install
+END
+installsql.mysql.utf8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mamaezona/!svn/ver/25/trunk/com_mamaezona/src/main/php/com_mamaezona/admin/install/installsql.mysql.utf8.sql
+END
+update.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/mamaezona/!svn/ver/4/trunk/com_mamaezona/src/main/php/com_mamaezona/admin/install/update.sql
+END
+uninstallsql.mysql.utf8.sql
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/mamaezona/!svn/ver/21/trunk/com_mamaezona/src/main/php/com_mamaezona/admin/install/uninstallsql.mysql.utf8.sql
+END

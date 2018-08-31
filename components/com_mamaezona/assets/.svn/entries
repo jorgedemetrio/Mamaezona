@@ -1,0 +1,40 @@
+8
+
+dir
+89
+http://svn.alldreams.com.br/mamaezona/trunk/com_mamaezona/src/main/php/com_mamaezona/site/assets
+http://svn.alldreams.com.br/mamaezona
+
+
+
+2018-07-03T05:10:07.438639Z
+89
+jorge
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee29b90b-57aa-4898-9815-6f9250040905
+
+css
+dir
+
+fonts
+dir
+
+google
+dir
+
+js
+dir
+

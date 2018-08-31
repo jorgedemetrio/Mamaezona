@@ -1,0 +1,136 @@
+##
+# @package    Joomla
+# @copyright  Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
+# @license    GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+##
+# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
+#
+# The line 'Options +FollowSymLinks' may cause problems with some server configurations.
+# It is required for the use of mod_rewrite, but it may have already been set by your 
+# server administrator in a way that disallows changing it in this .htaccess file.
+# If using it causes your site to produce an error, comment it out (add # to the 
+# beginning of the line), reload your site in your browser and test your sef urls. If 
+# they work, then it has been set by your server administrator and you do not need to 
+# set it here.
+##
+
+## No directory listings
+<IfModule autoindex>
+  IndexIgnore *
+</IfModule>
+
+## Can be commented out if causes errors, see notes above.
+Options +FollowSymlinks
+Options -Indexes
+
+## Mod_rewrite in use.
+
+RewriteEngine On
+
+## Begin - Rewrite rules to block out some common exploits.
+# If you experience problems on your site then comment out the operations listed 
+# below by adding a # to the beginning of the line.
+# This attempts to block the most common type of exploit `attempts` on Joomla!
+#
+# Block any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root home page
+RewriteRule .* index.php [F]
+#
+## End - Rewrite rules to block out some common exploits.
+
+## Begin - Custom redirects
+#
+# If you need to redirect some pages, or set a canonical non-www to
+# www redirect (or vice versa), place that code here. Ensure those
+# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
+#
+## End - Custom redirects
+
+##
+# Uncomment the following line if your webserver's URL
+# is not directly related to physical file paths.
+# Update Your Joomla! Directory (just / for root).
+##
+
+# RewriteBase /
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.
+
+
+
+
+
+
+
+#Força a utilizar Cache-Control e Expires header
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+<IfModule mod_expires.c>
+ ExpiresActive on
+ ExpiresDefault "access plus 1 month"
+ ExpiresByType text/cache-manifest "access plus 0 seconds"
+ # Html
+ ExpiresByType text/html "access plus 0 seconds"
+ # Data
+ ExpiresByType text/xml "access plus 0 seconds"
+ ExpiresByType application/xml "access plus 0 seconds"
+ ExpiresByType application/json "access plus 0 seconds"
+ # Feed
+ ExpiresByType application/rss+xml "access plus 1 hour"
+ ExpiresByType application/atom+xml "access plus 1 hour"
+ # Favicon
+ ExpiresByType image/x-icon "access plus 1 week"
+ # Media: images, video, audio
+ ExpiresByType image/gif "access plus 1 month"
+ ExpiresByType image/png "access plus 1 month"
+ ExpiresByType image/jpg "access plus 1 month"
+ ExpiresByType image/jpeg "access plus 1 month"
+ ExpiresByType video/ogg "access plus 1 month"
+ ExpiresByType audio/ogg "access plus 1 month"
+ ExpiresByType video/mp4 "access plus 1 month"
+ ExpiresByType video/webm "access plus 1 month"
+ # HTC files
+ ExpiresByType text/x-component "access plus 1 month"
+ # Webfonts
+ ExpiresByType application/x-font-ttf "access plus 1 month"
+ ExpiresByType font/opentype "access plus 1 month"
+ ExpiresByType application/x-font-woff "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 month"
+ ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+ # CSS / JS
+ ExpiresByType text/css "access plus 1 year"
+ ExpiresByType application/javascript "access plus 1 year"
+ ExpiresByType application/x-javascript  "access plus 1 year"
+</IfModule>
+#Força o IE a sempre carregar utilizando a última versão disponível
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge,chrome=1"
+  <FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>

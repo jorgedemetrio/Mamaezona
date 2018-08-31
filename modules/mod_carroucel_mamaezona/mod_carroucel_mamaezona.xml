@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Destaque Carroucel Mamãezona</name>
+	<author>Jorge Demetrio</author>
+	<version>1.0</version>
+	<description>Módulo De busca</description>
+
+
+
+	<medias>
+		<medianame>mod_carroucel_mamaezona.xml</medianame>
+		<medianame module="mod_carroucel_mamaezona">mod_carroucel_mamaezona.php</medianame>
+		<medianame>index.html</medianame>
+		<medianame>helper.php</medianame>
+		<folder>tmpl</folder>
+		<folder>languages</folder>
+	</medias>
+	<languages>
+		<language tag="pt-BR">languages/pt-BR.mod_carroucel_mamaezona.ini</language>
+		<language tag="pt-BR">languages/pt-BR.mod_carroucel_mamaezona.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="qtda" type="number" default="0" label="QUANTIDADE_DESTAQUE" />
+			
+				<field name="titulo1" type="text" default="" size="50" required="true" label="Titulo 1" />
+				<field name="descricao1" type="text" default="" size="100" required="true" label="Descrição 1" />
+				<field name="url1" type="text" default="" size="255" required="true" label="URL 1" />
+				<field name="image1" type="media"  label="Imagem" description="Imagem de carrousel" accept="image/*" />
+				
+				<field name="titulo2" type="text" default="" size="50" required="true" label="Titulo 2" />
+				<field name="descricao2" type="text" default="" size="100" required="true" label="Descrição 2" />
+				<field name="url2" type="text" default="" size="255" required="true" label="URL 2" />
+				<field name="image2" type="media"  label="Imagem" description="Imagem de carrousel" accept="image/*" />
+				
+				
+				<field name="titulo3" type="text" default="" size="50" required="true" label="Titulo 3" />
+				<field name="descricao3" type="text" default="" size="100" required="true" label="Descrição 3" />
+				<field name="url3" type="text" default="" size="255" required="true" label="URL 3" />
+				<field name="image3" type="media"  label="Imagem" description="Imagem de carrousel" accept="image/*" />
+				
+				
+				<field name="titulo4" type="text" default="" size="50" required="true" label="Titulo 4" />
+				<field name="descricao4" type="text" default="" size="100" required="true" label="Descrição 4" />
+				<field name="url4" type="text" default="" size="255" required="true" label="URL 4" />
+				<field name="image4" type="media"  label="Imagem" description="Imagem de carrousel" accept="image/*" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" name="Destaque Carroucel Mamãezona" priority="1">http://updates.alldreams.com.br/mod_carroucel_mamaezona.xml</server>
+	</updateservers>
+	<config>
+	</config>
+</extension>

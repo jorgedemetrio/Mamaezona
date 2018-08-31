@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content">
+	<name>Plugin Demeter Content</name>
+	<author>Jorge Demetrio</author>
+	<creationDate>Outrubro 2017</creationDate>
+
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorEmail>jorge.demetrio@alldreams.com.br</authorEmail>
+	<authorUrl>www.alldreams.com.br</authorUrl>
+	<version>2018.41</version>
+	<description>Social Media a suas páginas</description>
+	<files>
+<!-- 		<filename plugin="categories">categories.php</filename> -->
+		<filename>index.html</filename>
+		<filename plugin="demeter_content_plugin">demeter_content_plugin.php</filename>
+	</files>
+	<!-- languages>
+		<language tag="en-GB">en-GB.plg_search_categories.ini</language>
+		<language tag="en-GB">en-GB.plg_search_categories.sys.ini</language>
+	</languages-->
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="tamanho" type="text"
+					description="Tamanhoda página"
+					label="Tamanho página"
+					size="5"
+				/>
+				<field name="token_facebook" type="text"
+					description="Token do Facebook"
+					label="Token do Facebook"
+				/>
+				<field name="id_facebook" type="text"
+					description="ID do Facebook API"
+					label="ID do Facebook"
+				/>
+
+				
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

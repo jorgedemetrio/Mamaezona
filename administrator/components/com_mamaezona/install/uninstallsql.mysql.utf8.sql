@@ -1,0 +1,2 @@
+--DROP TABLE IF EXISTS `#__conteudo_mm`;
+---DELETE FROM `#__content_types` WHERE  `type_alias` = '#__content_types';

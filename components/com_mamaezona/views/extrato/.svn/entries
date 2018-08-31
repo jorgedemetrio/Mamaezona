@@ -1,0 +1,57 @@
+8
+
+dir
+89
+http://svn.alldreams.com.br/mamaezona/trunk/com_mamaezona/src/main/php/com_mamaezona/site/views/extrato
+http://svn.alldreams.com.br/mamaezona
+
+
+
+2018-07-03T05:10:07.438639Z
+89
+jorge
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee29b90b-57aa-4898-9815-6f9250040905
+
+index.html
+file
+
+
+
+
+2018-02-05T14:51:28.000000Z
+9fd839c83c5d9c9ba6543187bc92e8bc
+2018-02-05T04:57:23.010087Z
+48
+jorge
+has-props
+
+tmpl
+dir
+
+view.html.php
+file
+
+
+
+
+2018-07-02T01:09:37.899000Z
+7a0cef3bcaeda4562e67fe4c39de949d
+2018-07-02T00:26:22.410688Z
+87
+jorge
+has-props
+

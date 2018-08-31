@@ -1,0 +1,62 @@
+8
+
+dir
+25
+http://svn.alldreams.com.br/mamaezona/trunk/com_mamaezona/src/main/php/com_mamaezona/admin/views
+http://svn.alldreams.com.br/mamaezona
+
+
+
+2017-10-30T04:42:13.830130Z
+4
+jorge
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee29b90b-57aa-4898-9815-6f9250040905
+
+categoria
+dir
+
+conteudo
+dir
+
+convidar
+dir
+
+feijao
+dir
+
+gerarlink
+dir
+
+index.html
+file
+
+
+
+
+2018-01-11T16:07:40.000000Z
+9fd839c83c5d9c9ba6543187bc92e8bc
+2017-10-30T04:42:13.830130Z
+4
+jorge
+has-props
+
+oportunidades
+dir
+
+tutu
+dir
+
