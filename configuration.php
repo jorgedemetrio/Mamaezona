@@ -61,7 +61,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $feed_limit = '10';
 	public $feed_email = 'none';
 	public $log_path = '/opt/app-root/src/files/administrator/logs';
-	public $tmp_path = '/opt/app-root/src/files/tmp';
+	public $tmp_path = '/opt/app-root/src/files/stmp';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';
