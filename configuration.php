@@ -21,7 +21,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $password = 'M4m43zon4@';
 	public $db = 'mamaezona_yt';
 	public $dbprefix = 'yt_';
-	public $live_site = 'https://www.mamaezona.com.br';
+	public $live_site = 'http://mysql-alldreams.b9ad.pro-us-east-1.openshiftapps.com';
 	public $secret = 'HjGc3psdSqPqGAGm';
 	public $gzip = '1';
 	public $error_reporting = 'default';
@@ -44,7 +44,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $smtphost = 'br280.hostgator.com.br';
 	public $smtpsecure = 'ssl';
 	public $smtpport = '465';
-	public $caching = '1';
+	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '30';
 	public $cache_platformprefix = '1';
@@ -88,7 +88,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $replytoname = 'Mamãezona para Youtubers';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';
-	public $force_ssl = '2';
+	public $force_ssl = '0';
 	public $session_memcache_server_host = 'localhost';
 	public $session_memcache_server_port = '11211';
 	public $session_memcached_server_host = 'localhost';
