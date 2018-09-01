@@ -60,9 +60,9 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/arquivos/administrator/logs';
-	public $tmp_path = '/arquivos/tmp';
-	public $cache_path = '/arquivos/cache';
+	public $log_path = '/arquivos/amamezona/administrator/logs';
+	public $tmp_path = '/arquivos/amamezona/tmp';
+	public $cache_path = '/arquivos/amamezona/cache';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';
