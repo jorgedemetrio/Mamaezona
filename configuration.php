@@ -16,7 +16,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
-	public $host = 'mysql-mamaezona.b9ad.pro-us-east-1.openshiftapps.com';
+	public $host = 'mysql';
 	public $user = 'mamaezona';
 	public $password = 'M4m43zon4@';
 	public $db = 'mamaezona_yt';
