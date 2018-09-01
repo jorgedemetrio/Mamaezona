@@ -60,8 +60,8 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/home/www/mamaezona/www_yt/administrator/logs';
-	public $tmp_path = '/home/www/mamaezona/www_yt/tmp';
+	public $log_path = '/opt/app-root/src/files/administrator/logs';
+	public $tmp_path = '/opt/app-root/src/files/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';
