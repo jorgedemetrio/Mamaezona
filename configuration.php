@@ -21,7 +21,7 @@ Os convidados podem convidar outras pessoas, ou seja você só terá acesso a es
 	public $password = 'M4m43zon4@';
 	public $db = 'mamaezona_yt';
 	public $dbprefix = 'yt_';
-	public $live_site = 'http://mysql-alldreams.b9ad.pro-us-east-1.openshiftapps.com';
+	public $live_site = 'http://mamaezona-alldreams.b9ad.pro-us-east-1.openshiftapps.com';
 	public $secret = 'HjGc3psdSqPqGAGm';
 	public $gzip = '1';
 	public $error_reporting = 'default';
